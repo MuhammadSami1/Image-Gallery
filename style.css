@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#h2{
+    background-color: gray;
+    color: rgba(195, 205, 50, 0.7);
+    height: 60px;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 10vh;
+    left: 55vh;
+    border-radius: 5px;
+    
+}
