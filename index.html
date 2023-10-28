@@ -5,13 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Generator</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
+    
     <div class="main">
-        <h1 id="h2">Picture Gallery</h1>
+    <h1 id="h1">Picture Gallery</h1>
         <div class="mainimage">
-            <!-- <img src="/images/image1.jpg" alt="image1"> -->
+            <img src="/images/image1.jpg" class="image1" alt="image1">
+            <img src="images/image2.jpg" class="image1"  alt="image2">
+            <img src="images/image3.jpg" class="image1" alt="image3">
+            <img src="images/image4.jpg" class="image1" alt="image4">
         </div>
     </div>
+    <div id="modal">
+        <img src="" id="modalimage" alt="modal Image">
+        <button id="crossbtn">x</button>
+    </div>
+
+<script>
+    window.onload = ()=>
+{
+    loadimage();
+}
+
+loadimage= ()=>
+{
+    let img = document.getElementsByClassName('mainimage');
+    for(let i=0; i<img.length; i++ ){
+        img[i].onclick = (target)=>
+        {
+            openimage(event.target.src);
+        }
+    }
+}
+
+openimage = (src)=>
+{
+    document.getElementById('modal').style.display="flex";
+    document.getElementById('modalimage').src=src;
+
+}
+
+document.getElementById('crossbtn').onclick = () => {
+    document.getElementById('modal').style.display = "none";
+};
+
+</script>
 </body>
 </html>
